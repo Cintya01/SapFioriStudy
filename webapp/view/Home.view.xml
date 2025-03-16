@@ -1,0 +1,11 @@
+<mvc:View controllerName="com.bootcamp.sapui5.projectfreestyleui5.controller.Home"
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m">
+    <Page id="page" title="{i18n>title}">
+    <Button type="Back" press="onPress" />
+
+
+<Button text="Default" press="onPress" ariaDescribedBy="defaultButtonDescription genericButtonDescription"/>
+
+    </Page>
+</mvc:View>

@@ -1,4 +1,4 @@
-## Application Details
+# SapFioriStudy## Application Details
 |               |
 | ------------- |
 |**Generation Date and Time**<br>Sat Mar 15 2025 19:50:17 GMT+0000 (Coordinated Universal Time)|

@@ -16,7 +16,26 @@ sap.ui.define([
         
         onPress: async function(){
             let oDatos = await HomeHelper.getDataProducts();
-            //await HomeHelper.setProductModel(this, oDatos[0].results);
-        }
+            await HomeHelper.setProductModel(this, oDatos[0].results);
+        },
+
+        // onSearch: function (event) {
+		// 	if (event.getParameter("searchButtonPressed")) {
+        //         if (this.oDatos && this.oDatos.length > 0) {
+        //             let searchTerm = event.getParameter("query"); 
+        //             let filteredResults = this.oDatos.filter(item => item.name.toLowerCase().includes(searchTerm.toLowerCase()));
+
+        //             if (filteredResults.length > 0) {
+
+        //                 HomeHelper.setProductModel(this, filteredResults);
+        //                 MessageToast.show("Found " + filteredResults.length + " products");
+        //             } else {
+        //                 MessageToast.show("No products found for: " + searchTerm);
+        //             }
+        //         } else {
+        //             MessageToast.show("No data available for search.");
+        //         }
+		// 	}
+		// }
     });
 });

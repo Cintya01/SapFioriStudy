@@ -1,0 +1,8 @@
+<c:FragmentDefinition
+    xmlns="sap.m"
+    xmlns:c="sap.ui.core"
+>
+    <Text text="{i18n>textPrueba}"></Text>
+     <Button text="{i18n>btntext1}" press="onPress"/>
+
+</c:FragmentDefinition>

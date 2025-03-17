@@ -2,10 +2,13 @@
     xmlns:mvc="sap.ui.core.mvc"
     xmlns="sap.m">
     <Page id="page" title="{i18n>title}">
-    <Button type="Back" press="onPress" />
+    <!-- <Button type="Back" press="onPress" /> -->
+<VBox>
+    <Text text="{i18n>textPrueba}"></Text>
+       <Button text="{i18n>btntext1}" press="onPress"/>
+</VBox>
 
-
-<Button text="Default" press="onPress" ariaDescribedBy="defaultButtonDescription genericButtonDescription"/>
+ 
 
     </Page>
 </mvc:View>

@@ -7,17 +7,28 @@ sap.ui.define([
 
     return Controller.extend("com.bootcamp.sapui5.projectfreestyleui5.controller.Home", {
         onInit() {
-            //this._oResourceBundle = this.getOwnerComponent().getModel("i18n").getResourceBundle();
+            this._oResourceBundle = this.getOwnerComponent().getModel("i18n").getResourceBundle();
+            this.oRouter = this.getOwnerComponent().getRouter();
         },
-        // onPress: function () {
-        //     let salute = this._oResourceBundle.getText("btntext1");
-		// 	MessageToast.show(salute);
-		// }
+        onPressed: function () {
+            let salute = this._oResourceBundle.getText("btntext1");
+			MessageToast.show(salute);
+		},
         
         onPress: async function(){
             let oDatos = await HomeHelper.getDataProducts();
             await HomeHelper.setProductModel(this, oDatos[0].results);
         },
+
+        onItemPress: function(oEvent){
+            let oSource = oEvent.getSource();
+
+            let oDatos = oSource.getBindingContext("ProductCollection").getObject();
+
+            this.oRouter.navTo("detail", {
+                ProductID: oDatos.ProductID
+            });
+        }
 
         // onSearch: function (event) {
 		// 	if (event.getParameter("searchButtonPressed")) {

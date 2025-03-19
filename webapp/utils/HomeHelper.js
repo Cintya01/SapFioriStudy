@@ -10,7 +10,7 @@ sap.ui.define([
 		},
 
 		getDataProducts: async function() {
-            let oFilters = [];
+           let oFilters = [];
             return HomeService.readProducts(this._oNorthwindModel, oFilters);
         },
 

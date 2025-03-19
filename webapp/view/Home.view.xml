@@ -3,7 +3,7 @@
     xmlns:c="sap.ui.core"
     xmlns="sap.m">
     <Page id="page" title="{i18n>title}">
-    <!-- <Button type="Back" press="onPress" /> -->
+    <Button type="Back" press="onPressed" />
 <VBox>
 
 <c:Fragment 
